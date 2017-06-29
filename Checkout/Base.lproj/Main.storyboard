@@ -228,19 +228,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dov-th-riM">
-                                <rect key="frame" x="0.0" y="132" width="375" height="469"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dov-th-riM">
+                                <rect key="frame" x="10" y="166.5" width="355" height="434.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <inset key="scrollIndicatorInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CdV-pM-kLM">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CdV-pM-kLM">
                                     <size key="itemSize" width="101" height="55"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="currencyCell" id="UPM-cT-8rZ" customClass="CurrencyTypeCollectionViewCell" customModule="Checkout" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="101" height="55"/>
+                                        <rect key="frame" x="0.0" y="5" width="101" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="101" height="55"/>
@@ -266,13 +265,12 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="currencyName" destination="Qqd-Nq-bEk" id="OqD-Mq-OBw"/>
-                                            <outlet property="name" destination="Qqd-Nq-bEk" id="tcZ-c3-CN7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LKS-PM-mqI"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="p1Q-eM-vDl"/>
+                                    <outlet property="dataSource" destination="rjv-XY-eIo" id="8y6-wo-dsN"/>
+                                    <outlet property="delegate" destination="rjv-XY-eIo" id="cTY-L3-4fC"/>
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCy-bo-1g4">
@@ -294,8 +292,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xN-6V-8Zb">
-                                <rect key="frame" x="10" y="20" width="48" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="10" y="20" width="54" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.16078431904315948" green="0.50196081399917603" blue="0.72549021244049072" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -303,20 +301,49 @@
                                     <action selector="cancelCheckout:" destination="rjv-XY-eIo" eventType="touchUpInside" id="iBR-RJ-4hZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReV-uK-WYQ">
+                                <rect key="frame" x="10" y="139" width="136.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBw-NE-vVX">
+                                <rect key="frame" x="330" y="20" width="35" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="USD">
+                                    <color key="titleColor" red="0.16078431900000001" green="0.50196081400000003" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelCheckout:" destination="rjv-XY-eIo" eventType="touchUpInside" id="QTp-ym-Hrg"/>
+                                    <action selector="convertBackToUSD:" destination="rjv-XY-eIo" eventType="touchUpInside" id="Ffd-Ne-IaO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPZ-3O-1kE">
+                                <rect key="frame" x="330" y="139" width="35" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jCy-bo-1g4" firstAttribute="leading" secondItem="aQb-s3-IFJ" secondAttribute="leading" constant="10" id="0rV-LZ-rAu"/>
+                            <constraint firstItem="dov-th-riM" firstAttribute="leading" secondItem="jCy-bo-1g4" secondAttribute="leading" id="10I-3P-0aD"/>
                             <constraint firstItem="1xN-6V-8Zb" firstAttribute="leading" secondItem="aQb-s3-IFJ" secondAttribute="leadingMargin" constant="-6" id="3Gk-fl-0Xr"/>
                             <constraint firstItem="jjA-Oz-Ri2" firstAttribute="centerX" secondItem="Ym6-Te-CzJ" secondAttribute="centerX" id="J35-iv-BCp"/>
-                            <constraint firstItem="dov-th-riM" firstAttribute="leading" secondItem="aQb-s3-IFJ" secondAttribute="leading" id="Kxg-1v-ko8"/>
                             <constraint firstItem="1AG-OK-HIw" firstAttribute="top" secondItem="jCy-bo-1g4" secondAttribute="bottom" constant="8" id="RVq-Wx-2TY"/>
-                            <constraint firstAttribute="trailing" secondItem="dov-th-riM" secondAttribute="trailing" id="Vbo-3W-Hmn"/>
+                            <constraint firstItem="ReV-uK-WYQ" firstAttribute="top" secondItem="jjA-Oz-Ri2" secondAttribute="bottom" constant="15" id="Sgl-D9-vgd"/>
+                            <constraint firstItem="ReV-uK-WYQ" firstAttribute="leading" secondItem="1xN-6V-8Zb" secondAttribute="leading" id="W7a-p0-81B"/>
+                            <constraint firstItem="dov-th-riM" firstAttribute="trailing" secondItem="jCy-bo-1g4" secondAttribute="trailing" id="WKH-sn-gd0"/>
                             <constraint firstItem="jjA-Oz-Ri2" firstAttribute="top" secondItem="Ym6-Te-CzJ" secondAttribute="bottom" constant="8" id="aCf-N7-6Qt"/>
+                            <constraint firstItem="dBw-NE-vVX" firstAttribute="centerY" secondItem="1xN-6V-8Zb" secondAttribute="centerY" id="ahY-RY-cHd"/>
                             <constraint firstItem="Ym6-Te-CzJ" firstAttribute="centerX" secondItem="aQb-s3-IFJ" secondAttribute="centerX" id="b61-R9-Ed9"/>
+                            <constraint firstItem="cPZ-3O-1kE" firstAttribute="trailing" secondItem="dov-th-riM" secondAttribute="trailing" id="fNq-8l-77D"/>
+                            <constraint firstItem="dBw-NE-vVX" firstAttribute="trailing" secondItem="dov-th-riM" secondAttribute="trailing" id="gTI-Dm-Rk8"/>
                             <constraint firstAttribute="trailing" secondItem="jCy-bo-1g4" secondAttribute="trailing" constant="10" id="hI3-Ba-U6e"/>
                             <constraint firstItem="dov-th-riM" firstAttribute="centerX" secondItem="aQb-s3-IFJ" secondAttribute="centerX" id="kvZ-Md-Bbi"/>
-                            <constraint firstItem="dov-th-riM" firstAttribute="top" secondItem="jjA-Oz-Ri2" secondAttribute="bottom" constant="8" id="u9j-DA-8Yl"/>
+                            <constraint firstItem="cPZ-3O-1kE" firstAttribute="centerY" secondItem="ReV-uK-WYQ" secondAttribute="centerY" id="w8t-tb-mjd"/>
+                            <constraint firstItem="dov-th-riM" firstAttribute="top" secondItem="ReV-uK-WYQ" secondAttribute="bottom" constant="4" id="xJO-a6-RPP"/>
                             <constraint firstItem="1xN-6V-8Zb" firstAttribute="top" secondItem="giw-rd-pHH" secondAttribute="bottom" id="xaF-zF-z5U"/>
                             <constraint firstItem="Ym6-Te-CzJ" firstAttribute="top" secondItem="giw-rd-pHH" secondAttribute="bottom" id="xql-6Q-dbQ"/>
                             <constraint firstItem="jCy-bo-1g4" firstAttribute="top" secondItem="dov-th-riM" secondAttribute="bottom" constant="8" id="zQU-pm-cq2"/>
@@ -324,6 +351,7 @@
                     </view>
                     <connections>
                         <outlet property="currencyCollectionView" destination="dov-th-riM" id="tUH-Te-qcp"/>
+                        <outlet property="currentCurrencyLabel" destination="cPZ-3O-1kE" id="1MT-XX-4nG"/>
                         <outlet property="totalLabel" destination="jjA-Oz-Ri2" id="ly8-Hk-k4u"/>
                     </connections>
                 </viewController>

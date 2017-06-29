@@ -36,7 +36,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         totalCartItems.text = "\(cartManager.numberOfItemsInCart())"
-        tableView.reloadData()
     }
     
     //  MARK: TableView Delegate & Data Source
@@ -107,12 +106,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let product = cartManager.inventory[indexPath.row]
-        cartManager.add(product: product)
-        totalCartItems.text = "\(cartManager.numberOfItemsInCart())"
-        checkoutButton.isEnabled = true
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            let product = self.cartManager.inventory[indexPath.row]
+            self.cartManager.add(product: product)
+            self.totalCartItems.text = "\(self.cartManager.numberOfItemsInCart())"
+            self.checkoutButton.isEnabled = true
+            self.tableView.reloadData()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
