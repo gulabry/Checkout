@@ -314,7 +314,6 @@
                                     <color key="titleColor" red="0.16078431900000001" green="0.50196081400000003" blue="0.7254902124" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelCheckout:" destination="rjv-XY-eIo" eventType="touchUpInside" id="QTp-ym-Hrg"/>
                                     <action selector="convertBackToUSD:" destination="rjv-XY-eIo" eventType="touchUpInside" id="Ffd-Ne-IaO"/>
                                 </connections>
                             </button>
