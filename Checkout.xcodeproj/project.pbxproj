@@ -13,6 +13,8 @@
 		C2A88D421F036354007DBF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A88D411F036354007DBF44 /* Assets.xcassets */; };
 		C2A88D451F036354007DBF44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A88D431F036354007DBF44 /* LaunchScreen.storyboard */; };
 		C2A88D501F036355007DBF44 /* CheckoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A88D4F1F036355007DBF44 /* CheckoutTests.swift */; };
+		C2A88D5B1F036CC1007DBF44 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A88D5A1F036CC1007DBF44 /* Product.swift */; };
+		C2A88D5D1F057AC2007DBF44 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A88D5C1F057AC2007DBF44 /* CheckoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		C2A88D4B1F036355007DBF44 /* CheckoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A88D4F1F036355007DBF44 /* CheckoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTests.swift; sourceTree = "<group>"; };
 		C2A88D511F036355007DBF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A88D5A1F036CC1007DBF44 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		C2A88D5C1F057AC2007DBF44 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				C2A88D3A1F036354007DBF44 /* AppDelegate.swift */,
 				C2A88D3C1F036354007DBF44 /* ViewController.swift */,
 				C2A88D3E1F036354007DBF44 /* Main.storyboard */,
+				C2A88D5A1F036CC1007DBF44 /* Product.swift */,
+				C2A88D5C1F057AC2007DBF44 /* CheckoutViewController.swift */,
 				C2A88D411F036354007DBF44 /* Assets.xcassets */,
 				C2A88D431F036354007DBF44 /* LaunchScreen.storyboard */,
 				C2A88D461F036354007DBF44 /* Info.plist */,
@@ -201,8 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A88D5D1F057AC2007DBF44 /* CheckoutViewController.swift in Sources */,
 				C2A88D3D1F036354007DBF44 /* ViewController.swift in Sources */,
 				C2A88D3B1F036354007DBF44 /* AppDelegate.swift in Sources */,
+				C2A88D5B1F036CC1007DBF44 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +353,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62QZG759UY;
 				INFOPLIST_FILE = Checkout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.gula.Checkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62QZG759UY;
 				INFOPLIST_FILE = Checkout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.gula.Checkout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
